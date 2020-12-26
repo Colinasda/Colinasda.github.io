@@ -4,7 +4,7 @@ title:      Bug记录之mac上完成删除mysql
 subtitle:   删除mysql及相关的配置文件
 date:       2020-12-27
 author:     Zhao Zihao
-header-img: img/the-first.png
+header-img: img/tag-bg.jpg
 catalog: false
 tags:
     - Bug
