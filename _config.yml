@@ -3,8 +3,8 @@ title: MyBlog
 SEOTitle: ZHAOZihao_blog
 header-img: img/post-bg-desk.jpg
 email: zi-hao.zhao@connect.polyu.hk
-description: "随手记录一些趣闻和遇到的Bug"
-keyword: "人工语言, 国际语, 世界语, 三叶草国际语, 三叶语"
+description: "随手记录一些生活趣闻和遇到的Bug"
+keyword: "随手记录一些生活趣闻和遇到的Bug"
 url: "https://Colinasda.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/Colinasda" # you code repository
