@@ -4,7 +4,7 @@ title:      Bug记录之homebrew更新清理问题
 subtitle:   mac上用brew下载软件包遇到的问题以及解决方案
 date:       2020-12-25
 author:     Zhao Zihao
-header-img: img/the-first.png
+header-img: img/post-bg-universe.jpg
 catalog: false
 tags:
     - Bug
