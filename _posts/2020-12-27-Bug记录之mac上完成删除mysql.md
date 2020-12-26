@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      Bug记录之mac上完成删除mysql
+subtitle:   删除mysql及相关的配置文件
+date:       2020-12-27
+author:     Zhao Zihao
+header-img: img/the-first.png
+catalog: false
+tags:
+    - Bug
+---
+
+
 有时我们在安装新版本的mysql之前，需要从电脑上删除旧版本的mysql
 
 其中mac从官网[https://www.mysql.com/downloads/](https://www.mysql.com/downloads/)下载的mysql默认路径是` /url/local/mysql`
