@@ -1,3 +1,15 @@
+---
+layout:     post
+title:      Bug记录之homebrew更新清理问题
+subtitle:   mac上用brew下载软件包遇到的问题以及解决方案
+date:       2020-12-25
+author:     Zhao Zihao
+header-img: img/the-first.png
+catalog: false
+tags:
+    - Bug
+---
+
 记录一些自己使用brew(homebrew)遇到的问题
 
 ## Record1:更新问题
