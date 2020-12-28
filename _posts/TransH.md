@@ -1,0 +1,30 @@
+Knowledge Graph Embedding by **Trans**lating on **H**yperplanes（2014）
+
+TransH的目标是处理一对多/多对一/多对多关系，并且不增加模式的复杂性和训练难度。
+
+其基本思想是将**关系**解释为超平面上的转换操作。每个关系都有两个向量，超平面的范数向量Wr和超平面上的平移向量(dr)。
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3w9w6tdtj30i20a0acw.jpg)
+
+我们把每个head向量(h)和tail向量(t)投影到超平面上，得到新的向量(h⊥和t⊥)。在这个超平面中存在一个关系(d_r)，我们可以像TransE模型一样训练它。
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3wac1j3ij308k01wq33.jpg)
+
+得分函数：
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3wbaqq8xj30ba022mxo.jpg)
+
+如何在超平面上计算这个投影：
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3wbhbm1sj30dc020q2z.jpg)
+
+其中w_r的范数约束为1。
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3wbmhdd8j303u01jmx4.jpg)
+
+*h⊥* 是h在超平面上的投影，*wrT*是h在wr上的投影。这意味着我们将head/tail向量分解为两部分。
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3wbs2ebkj308301p0sv.jpg)
+
+损失函数和训练方法与TransE相同。
+
