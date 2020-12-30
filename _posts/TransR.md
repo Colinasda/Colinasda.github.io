@@ -1,0 +1,25 @@
+Learning Entity and Relation Embeddings for Knowledge Graph Completion（2015）
+
+TransE和TransH模型都假设实体和关系是语义空间中的向量，因此相似的实体在同一实体空间中会非常接近。
+
+然而，每个实体可以有许多方面，不同的关系关注实体的不同方面。例如，`(location, contains, location)`的关系是'contains'，`(person, born, date)`的关系是'born'。这两种关系非常不同。
+
+为了解决这个问题，我们让TransR在两个不同的空间，即**实体空间**和**多个关系空间**(关系特定的实体空间)中建模实体和关系，并在对应的关系空间中进行转换，因此命名为TrandR。
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3x460wdwj30du06ktaj.jpg)
+
+TransR的基本思想如图1所示。对于每个三元组(h, r, t)，将实体空间中的实体通过矩阵Mr投影到r关系空间中，分别为hr和tr，然后有hr + r ≈ tr，损失函数和训练方法与TransE相同。**h**和**t**为实体嵌入，**r**为关系嵌入。
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3x4b5o1uj308001twep.jpg)
+
+特定于关系的投影可以使实际持有这种关系的head/tail实体(表示为彩色圆圈)彼此靠近，同时那些不持有这个关系的实体相互远离(表示为彩色三角形)。
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3x4f7zmkj307w01dmxh.jpg)
+
+得分函数和目标函数与TransE相同。
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3x50im8rj30ga024gmp.jpg)
+
+TransR有一个变体模型，称为CTransR, C表示聚类。head和tail实体通常呈现不同的模式。仅仅构建一个关系向量来执行从head到tail实体的所有转换是不够的。例如，三元组`(location, contains, location)`具有许多模式，如country-city、country-university、contin- country等等。为了解决这个问题，CTransR将不同的head和tail实体对进行聚类，并对每一组学习不同的关系向量。
+
+构造CtransR的过程是，对于一个特定的关系r，将训练数据中所有的实体对*(h, t)*聚类到多个组中，期望每组中的实体对呈现相似的*r*关系。我们使用向量偏移量(**h-t**)表示实体对*(h, t)*。我们从TransE得到**h**和**t**。然后，我们分别学习了每个聚类对应的关系向量**r_c**，每个关系对应的矩阵Mr。
