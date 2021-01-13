@@ -1,0 +1,22 @@
+**Trans**lating **E**mbeddings for Modeling Multi-relational Data（2013）
+
+这是转换模型系列的第一部作品。该模型的基本思想是使head向量和relation向量的和尽可能靠近tail向量。这里我们用L1或L2范数来衡量它们的靠近程度。
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3x05c98tj30f70d9t9w.jpg)
+
+损失函数是使用了负抽样的max-margin函数。
+
+L(y, y’) = max(0, margin - y + y’)
+
+`y`是正样本的得分，`y'`是负样本的得分。然后使损失函数值最小化，当这两个分数之间的差距大于margin的时候就可以了(我们会设置这个值，通常是1)。
+
+由于我们使用距离来表示得分，所以我们在公式中加上一个减号，知识表示的损失函数为：
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3x0d5vm7j30jv029wf5.jpg)
+
+其中，d是：
+
+![](https://tva1.sinaimg.cn/large/0081Kckwly1gm3x0hpcidj307801a3yl.jpg)
+
+这是L1或L2范数。至于如何得到负样本，则是将head实体或tail实体替换为三元组中的随机实体。
+
