@@ -1,4 +1,14 @@
-Go-back-N(GBN)协议&选择性重复(SR)协议
+---
+layout:     post
+title:      GBN协议&SR协议
+subtitle:   Go-back-N(GBN)协议&选择性重复(SR)协议的区别
+date:       2021-1-14
+author:     Zhao Zihao
+header-img: img/the-first.png
+catalog: false
+tags:
+    - 计算机网络
+---
 
 #### 主要区别
 
