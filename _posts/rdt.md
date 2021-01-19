@@ -1,0 +1,67 @@
+### 两个简单概念
+
+可靠数据传输(Reliable Data Transfer,rdt)，发送方通过该协议把数据交给更底层（比如传输层交给网络层），底层负责传输，接收方再通过该协议把数据取出。
+
+有限状态机(Finite-state machine, FSM)，又称有限状态自动机，简称状态机，是表示有限个状态以及在这些状态之间的转移和动作等行为的数学模型。
+
+
+
+### rdt不同版本
+
+> 备注：以下图来自Computer_Networking_A_Top-Down_Approach
+>
+> ![](https://tva1.sinaimg.cn/large/008eGmZEly1gmsyloa37kj30cd0es47x.jpg)
+
+#### rdt 1.0
+
+假设底层信道是**完全可靠**的，传输的数据不会损坏或者丢失，这种理想情况下的协议十分简单，sender端和receiver端如下：
+
+![](https://tva1.sinaimg.cn/large/008eGmZEly1gmsymn0hwdj30cj0b3t9n.jpg)
+
+发送端等待上层传数据传进来，将数据打包为分组并将其发送到信道中。
+
+接收端收到分组以后，将封包解开，将其发送到上层应用。
+
+
+
+#### rdt2.0
+
+假设底层信道是具有**比特差错**信道，sender端和receiver端如下：
+
+![](https://tva1.sinaimg.cn/large/008eGmZEly1gmsz4uklbyj30iz0hhgnn.jpg)
+
+发送端等待上层传数据传进来，将数据和检验和打包为分组并将其发送到信道中然后等待，如果接受到ACK则数据无误，回到等待调用状态，如果收到NAK则说明发送的数据有误则进行重传。
+
+接收端收到资料，会有ACK(肯定确认)与NAK(否定确认请重传)两种讯息，当数据分组接收到以后确认无误，会发送ACK给发送方已确定数据无误。当发现有错误时，会传回NAK通知发送端重传。
+
+
+
+#### rdt2.1
+
+针对rdt2.0中ACK/NAK受损可能会导致重传的问题，rdt2.1加入了序列号机制(sequence number)，分组的号码可以让发送方知道是否需要重传以及让接收方确认这是否是一次重新传输的分组。sender端和receiver端如下：
+
+![](https://tva1.sinaimg.cn/large/008eGmZEly1gmsz8allkij30k60erq57.jpg)
+
+![](https://tva1.sinaimg.cn/large/008eGmZEly1gmsz8cpp6zj30mo0dkgod.jpg)
+
+
+
+#### rdt2.2
+
+一次使用两种确认信息ACK，NAK处理起来比较费力，因此rdt2.2中移除NAK的信息，在ACK中加入编号就可以达到确认与否认的效果。发送方必须检查接收到的ACK中的报文中被确认的分组序号。sender端和receiver端如下：
+
+![](https://tva1.sinaimg.cn/large/008eGmZEly1gmszc563rkj30l90eydi5.jpg)
+
+![](https://tva1.sinaimg.cn/large/008eGmZEly1gmszcfizcoj30l10cmmzc.jpg)
+
+
+
+#### rdt3.0
+
+假设底层信道是具有**比特差错和丢包**的信道，除了使用rdt2.2的机制，另外在发送端增加多了到技术定时器，封包送出去如果超时仍未收到ACK或是收到不正确编号的ACK，则重发。sender端如下：
+
+![](https://tva1.sinaimg.cn/large/008eGmZEly1gmsze9quwgj30ky0eywhc.jpg)
+
+对于rdt3.0的receiver端，在Computer_Networking_A_Top-Down_Approach这本书中没有提及，但是根据我个人理解，rdt3.0的receiver端与rdt2.2相比没有任何变化，因为rdt3.0只是在rdt2.2的基础上在sender端增加了计时器的功能。所以rdt3.0的receiver端(笔者根据rdt2.2的receiver重新做了一份)如下：
+
+![](https://tva1.sinaimg.cn/large/008eGmZEly1gmszilujz5j30kg0d0mz9.jpg)
