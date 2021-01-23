@@ -1,0 +1,43 @@
+如何找到优质的paper
+
+#### 1 Google Scholar
+
+Google 学术搜索是一项免费服务， 可以帮助快速寻找学术资料， 如专家评审文献、论文、书籍、预印本、摘要以及技术报告。作为此次扩展的一部分，Google 学术搜索在索引中涵盖了来自多方的信息，信息来源包括万方数据资源系统， 维普资讯， 主要大学发表的学术期刊、公开的学术期刊、中国大学的论文以及网上可以搜索到的各类文章。
+
+Google Scholar同时提供了中文版界面（[http://scholar.google.com](http://scholar.google.com/)）， 供中国用户更方便地搜索全球的学术科研信息。
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmxo2yqe7cj30j40begml.jpg)
+
+以搜索“machine learning”为例
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmxo3i4jhvj30ob03h74l.jpg)
+
+Cited by：
+
+文章引用数，文章引用越多，自然证明这篇文章权重越高。而且还有一个优点，是可以查看引用这篇文献的相关文献。也就是你可以顺藤摸瓜查看到很多最新的相关研究。
+
+点击某一检索的Cited by，就又出现了一个类似的搜索界面，不过所呈现的文章均是引用文献的相关文章。界面和功能和Google Scholar很相似，可以无限套娃。
+
+
+
+#### 2 中国计算机学会推荐国际学术会议和期刊目录
+
+[https://www.ccf.org.cn/Academic_Evaluation/By_category/](https://www.ccf.org.cn/Academic_Evaluation/By_category/)
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmxoab47fnj30wu0hn43h.jpg)
+
+包含很多**Top Conferences**，点击子链可以到达具体的刊物地址。
+
+
+
+#### 3 arXiv
+
+[https://arxiv.org/](https://arxiv.org/)
+
+arXiv(发音同archive)是一个提供学术文章在线发表的服务器，领域涵盖物理学、数学、非线性科学、计算机科学、定量生命科学、计量金融学和统计学。arXiv名中的“X”对应于希腊字母“χ”（大写为“Χ”，发音chi)。故arXiv的本意即archive（**文献库**）。
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmxof165r2j30wm0i6n1y.jpg)
+
+发表arXiv的论文**不需要**通过审核(peer review)，因此被用作发表手稿或者预出版的论文。由于论文的审核工作一般需要几个月的时间，最新的研究结果发表到学术期刊上时已经失去了一定的时效性。另外，一些创新性过强的文章可能很难通过审核，因此只能以未审核的形式发表。由于没有通过审核，读者应当更加谨慎地对待发表在arXiv上的内容。访问和下载arXiv上的文献是完全免费的，不需要登录或者其他形式的认证。arXiv每个工作日都有很多新文献出现，可以用过RSS即时获得最新的文献标题和摘要。
+
+提交到arXiv的文章必须符合康奈尔大学学术标准。arXiv归康奈尔大学所有，并且由它管理。arXiv的经费来源于康奈尔大学图书馆以及其他支持arXiv的机构。
