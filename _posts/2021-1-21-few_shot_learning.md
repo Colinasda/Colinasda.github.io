@@ -1,4 +1,15 @@
-few-shot learning（少样本学习）
+---
+layout:     post
+title:      Few Shot Learning
+subtitle:   少样本学习的概念、定义以及优缺点
+date:       2021-1-21
+author:     Zhao Zihao
+header-img: img/post-bg-os-metro.jpg
+catalog: false
+tags:
+    - 机器学习
+---
+
 
 ### few-shot learning出现原因
 
@@ -58,4 +69,4 @@ Meta-learning 中 task 的概念是和 meta-learning 的本质有关的。Meta-l
 
  因此 meta-learning 和 few-shot learning 现在的研究基本都是在一起的。
 
-Meta-learning传送门:
+Meta-learning传送门:[Meta Learning](https://colinasda.github.io/2021/01/23/MetaLearning/)
