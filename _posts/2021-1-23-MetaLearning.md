@@ -1,3 +1,15 @@
+---
+layout:     post
+title:      Meta Learning
+subtitle:   元学习的定义、优势以及部分研究思路
+date:       2021-1-23
+author:     Zhao Zihao
+header-img: img/post-bg-os-metro.jpg
+catalog: false
+tags:
+    - 机器学习
+---
+
 **meta learning与few-shot learning联系：**
 
 我们需要元学习模型学习一个先验知识来帮助以后学习一个新的任务，这就导致很多元学习论文中会有  Task 或者 Episode 的概念，也就是我们需要学习很多类似的任务，然后用在这些任务上学到的先验知识使我们面对一个新问题的时候可以学习得又快又好，又快又好也就使得现在的元学习（meta learning）和少样本学习（few-shot learning）紧紧联系在一起。
