@@ -1,4 +1,14 @@
-
+---
+layout:     post
+title:      Machine Learning Introduction
+subtitle:   机器学习的详细介绍以及分类
+date:       2021-1-20
+author:     Zhao Zihao
+header-img: img/post-bg-rwd.jpg
+catalog: false
+tags:
+    - 机器学习
+---
 
 > 以下资料整理于李宏毅“李宏毅2020机器学习深度学习(完整版)国语”中的slides
 
