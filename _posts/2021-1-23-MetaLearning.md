@@ -4,7 +4,7 @@ title:      Meta Learning
 subtitle:   元学习的定义、优势以及部分研究思路
 date:       2021-1-23
 author:     Zhao Zihao
-header-img: img/9.jpeg
+header-img: img/11.jpg
 catalog: false
 tags:
     - 机器学习
