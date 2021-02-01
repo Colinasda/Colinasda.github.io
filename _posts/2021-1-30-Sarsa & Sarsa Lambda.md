@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      强化学习Sarsa和Sarsa Lambda
+subtitle:   on-policy强化学习Sarsa和Sarsa Lambda
+date:       2021-1-30
+author:     Zhao Zihao
+header-img: img/21.jpg
+catalog: false
+tags:
+    - 强化学习
+---
+
+
 #### Sarsa
 
 ”SARSA“ 五个字母是当前 S (状态), A(行动), R(奖励) 与 下一步S'(状态) A'(行动) 的组合，即我们不仅需要知道当前的S, A, R 还需要知道下一步的 S' 和 A‘。
