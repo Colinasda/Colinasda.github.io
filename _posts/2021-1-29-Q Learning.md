@@ -4,7 +4,7 @@ title:      强化学习Q Learning
 subtitle:   Q Learning的介绍以及简单demo
 date:       2021-1-29
 author:     Zhao Zihao
-header-img: img/23.jpg
+header-img: img/22.jpg
 catalog: false
 tags:
     - 强化学习
