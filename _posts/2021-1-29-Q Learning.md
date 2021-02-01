@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      强化学习Q Learning
+subtitle:   Q Learning的介绍以及简单demo
+date:       2021-1-29
+author:     Zhao Zihao
+header-img: img/23.jpg
+catalog: false
+tags:
+    - 强化学习
+---
+
+
 #### Q Learning的介绍
 
 智能体agent的每一次学习过程可以看作是从一个随机状态开始，采用一个策略来选择动作，如ε-greedy策略或Boltzamann分布策略。采用随机策略是为了**保证智能体能够搜索所有可能的动作**，对每个Q(s，a)进行更新。智能体在执行完所选的动作后，观察新的状态和回报，然后根据新状态的最大Q值和回报来更新上一个状态和动作的Q值。智能体将不断根据新的状态选择动作，直至到达一个终止状态。下面是Q—learning算法的描述：
