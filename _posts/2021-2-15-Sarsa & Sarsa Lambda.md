@@ -2,9 +2,9 @@
 layout:     post
 title:      强化学习Sarsa和Sarsa Lambda
 subtitle:   on-policy强化学习Sarsa和Sarsa Lambda
-date:       2021-1-30
+date:       2021-2-15
 author:     Zhao Zihao
-header-img: img/21.jpg
+header-img: img/p2.jpeg
 catalog: false
 tags:
     - 强化学习
